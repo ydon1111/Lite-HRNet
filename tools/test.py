@@ -16,7 +16,6 @@ from mmpose.datasets import build_dataloader, build_dataset
 import sys 
 sys.path.append('/media/yd/share/LiteHRNet/Lite-HRNet')
 
-
 from models import build_posenet
 
 

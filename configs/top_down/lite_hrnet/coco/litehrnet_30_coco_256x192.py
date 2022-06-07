@@ -135,10 +135,11 @@ train_pipeline = [
         type='Collect',
         keys=['img', 'target', 'target_weight'],
         meta_keys=[
-            'image_file', 'joints_3d', 'joints_3d_visible', 'center', 'scale',
+            'image_file', 'joints_3d', 'joints_3d_visible',  'scale',
             'rotation', 'bbox_score', 'flip_pairs'
         ]),
 ]
+# 'center',
 
 val_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -154,10 +155,11 @@ val_pipeline = [
             'img',
         ],
         meta_keys=[
-            'image_file', 'center', 'scale', 'rotation', 'bbox_score',
+            'image_file', 'scale', 'rotation', 'bbox_score',
             'flip_pairs'
         ]),
 ]
+# , 'center'
 test_pipeline = val_pipeline
 data_root = 'data/coco'
 data = dict(
